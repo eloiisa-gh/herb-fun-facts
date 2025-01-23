@@ -14,8 +14,8 @@ app = Flask(__name__)
 def hello_world():
     vertexai.init(project=project, location="us-central1")
     model = GenerativeModel("gemini-1.5-flash")
-    animal = request.args.get("animal", "parrot") 
-    prompt = f"Give me 10 fun facts about {animal}. Return this as html without backticks."
+    animal = request.args.get("animal", "domestic shorthair cats") 
+    prompt = f"Give me 11 fun facts about {animal}. Return this as html without backticks."
     response = model.generate_content(prompt)
     return response.text
 
