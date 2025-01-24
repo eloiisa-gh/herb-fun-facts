@@ -30,8 +30,8 @@ app = Flask(__name__)
 def hello_world():
     vertexai.init(project=project, location="us-central1")
     model = GenerativeModel("gemini-1.5-flash")
-    animal = request.args.get("animal", "domestic shorthair cats") 
-    prompt = f"Give me 11 fun facts about {animal}. Return this as html without backticks."
+    herb = request.args.get("herb", "basil") 
+    prompt = f"Give me 11 interesting facts about {herb}. Return this as html without backticks."
     response = model.generate_content(prompt)
 
     json_fields = {"prompt": prompt, "response": response.to_dict()}
