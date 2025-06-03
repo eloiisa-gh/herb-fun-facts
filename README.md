@@ -48,7 +48,10 @@ gcloud services enable \
 
 List the services a project has enabled for consumption: 
 ```
+gcloud services list --enabled --project=PROJECT_ID
 gcloud services list --enabled --project=${GOOGLE_CLOUD_PROJECT}
 ```
+
+
 
 </details>
