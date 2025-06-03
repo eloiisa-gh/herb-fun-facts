@@ -52,6 +52,11 @@ gcloud services list --enabled --project=PROJECT_ID
 gcloud services list --enabled --project=${GOOGLE_CLOUD_PROJECT}
 ```
 
+Open the main.py file in Cloud Shell Editor:
+```
+cloudshell edit main.py
+```
+
 
 ### Set up automatic deployments
 In the [Cloud Run page](https://console.cloud.google.com/run), click 'Connect repo' and Click 'Set up with Cloud Build'. 
