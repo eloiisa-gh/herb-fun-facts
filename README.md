@@ -53,5 +53,19 @@ gcloud services list --enabled --project=${GOOGLE_CLOUD_PROJECT}
 ```
 
 
+### Set up automatic deployments
+In the [Cloud Run page](https://console.cloud.google.com/run), click 'Connect repo' and Click 'Set up with Cloud Build'. 
+
+Step #1: 'Source repository'. 
+In step #2: 'Build Configuration', select Build Type: 'Go, Node.js, Python, Java, .NET Core, Ruby or PHP via Google Cloud's buildpacks'. 
+
+In 'Authentication', select 'Allow unauthenticated invocations'. 
+Click 'Create'.
+
+
+To get the resulting URL to view the running application: 
+```
+gcloud run services list
+```
 
 </details>
