@@ -11,7 +11,34 @@ Continuous deployment: [Cloud Run](https://cloud.google.com/run) is configured t
 Generative AI was added to the application using Vertex AI (Gemini 1.5 Flash). 
 
 
-To enable APIs: 
+Google Cloud CLI: 
+```
+gcloud auth list                                                     
+```
+
+Create a Cloud project
+```
+gcloud projects create PROJECT_ID
+gcloud projects list
+```
+
+### Enable billing for your Cloud project
+List available billing accounts: 
+```
+gcloud billing accounts list
+```
+
+Link a billing account with a Google Cloud project: 
+```
+gcloud billing projects link PROJECT_ID --billing-account=BILLING_ACCOUNT_ID
+```
+
+### Set your project
+```
+gcloud config set project PROJECT_ID
+```
+
+Enable APIs: 
 ```
 gcloud services enable \
   run.googleapis.com \
@@ -19,7 +46,7 @@ gcloud services enable \
   aiplatform.googleapis.com
 ```
 
-To list the services a project has enabled for consumption: 
+List the services a project has enabled for consumption: 
 ```
 gcloud services list --enabled --project=${GOOGLE_CLOUD_PROJECT}
 ```
