@@ -1,6 +1,6 @@
 # Gen AI for Python Developers
 
-This [website](https://codelab-genai-python-412316639419.us-central1.run.app/) shows 11 interesting facts about an herb. Eg: [oregano](https://codelab-genai-python-412316639419.us-central1.run.app/?herb=oregano)
+This [website](https://codelab-genai-python-305018566422.europe-west1.run.app/) shows 11 interesting facts about an herb. Eg: [oregano](https://codelab-genai-python-305018566422.europe-west1.run.app/?herb=oregano)
 
 <details >
   <summary>More details</summary>
