@@ -1,6 +1,6 @@
 # Gen AI + Python / Herbs Information 🌿
 
-This [website](https://codelab-genai-python-95958779617.europe-west1.run.app/) shows 11 interesting facts about an herb. Eg: [oregano](https://codelab-genai-python-95958779617.europe-west1.run.app?herb=thyme). Try it with [other herbs](https://www.britannica.com/plant/list-of-herbs-and-spices-2024392). 
+This [website](https://herb-fun-facts-95958779617.europe-west1.run.app/) shows 11 interesting facts about an herb. Eg: [oregano](https://herb-fun-facts-95958779617.europe-west1.run.app?herb=thyme). Try it with [other herbs](https://www.britannica.com/plant/list-of-herbs-and-spices-2024392). 
 
 `URL`/?herb=`HERB_NAME`
 
@@ -59,12 +59,14 @@ gcloud services list --enabled --project=${GOOGLE_CLOUD_PROJECT}
 
 
 ### Set up automatic deployments
-In the [Cloud Run page](https://console.cloud.google.com/run), click 'Connect repo' and Click 'Set up with Cloud Build'. 
+In the [Cloud Run page](https://console.cloud.google.com/run), select 'Create service', 'Continuously deploy from a repository (source or function)'. Click 'Set up with Cloud Build'. 
 
-Step #1: 'Source repository'. 
-In step #2: 'Build Configuration', select Build Type: 'Go, Node.js, Python, Java, .NET Core, Ruby or PHP via Google Cloud's buildpacks'. 
+Step #1: Select the 'Source repository'. 
+Step #2: 'Build Configuration' -> 'Build Type': `Go, Node.js, Python, Java, .NET Core, Ruby or PHP via Google Cloud's buildpacks`. 
 
-In 'Authentication', select 'Allow unauthenticated invocations'. 
+In the 'Configure' section, set the 'Service name' eg: `herb-fun-facts`, and 'Region'. 
+In 'Authentication', select `Allow unauthenticated invocations`. 
+
 Click 'Create'.
 
 
@@ -72,7 +74,7 @@ To get the resulting URL to view the running application:
 ```
 gcloud run services list
 ```
-https://codelab-genai-python-95958779617.europe-west1.run.app/
+https://herb-fun-facts-95958779617.europe-west1.run.app/
 
 
 </details>
