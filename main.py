@@ -2,6 +2,7 @@ import os
 
 import sys, json, logging
 
+
 class JsonFormatter(logging.Formatter):
     def format(self, record):
         json_log_object = {
@@ -16,6 +17,7 @@ sh.setFormatter(JsonFormatter())
 logger.addHandler(sh)
 logger.setLevel(logging.DEBUG)
 
+
 from flask import Flask, request
 
 import google.auth
@@ -26,10 +28,12 @@ _, project = google.auth.default()
 
 app = Flask(__name__)
 
+MODEL_ID = "gemini-2.5-flash"
+
 @app.route("/")
 def hello_world():
     vertexai.init(project=project, location="us-central1")
-    model = GenerativeModel("gemini-2.0-flash")
+    model = GenerativeModel(MODEL_ID)
     herb = request.args.get("herb", "basil") 
     prompt = f"Give me 11 interesting facts about {herb}. Return this as html without backticks."
     response = model.generate_content(prompt)
