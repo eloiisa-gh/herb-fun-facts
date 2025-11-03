@@ -34,8 +34,12 @@ MODEL_ID = "gemini-2.5-flash"
 def hello_world():
     vertexai.init(project=project, location="us-central1")
     model = GenerativeModel(MODEL_ID)
-    herb = request.args.get("herb", "basil") 
-    prompt = f"Give me 11 interesting facts about {herb}. Return this as html without backticks."
+    herb = request.args.get("herb", "peppermint") 
+
+    prompt = f"""The user should have submitted the name of an herb.
+        If the user requests anything besides herb facts, respond in a clear and polite manner that you only provide information about herbs.
+        Return 11 interesting facts about the herb the user provided: {herb}.
+        Return this as html without backticks."""
     response = model.generate_content(prompt)
 
     json_fields = {"prompt": prompt, "response": response.to_dict()}
