@@ -1,6 +1,6 @@
 # Gen AI + Python / Herbs Information 🌿
 
-This [website](https://herb-fun-facts-95958779617.europe-west1.run.app/) shows 11 interesting facts about an herb. Eg: [oregano](https://herb-fun-facts-95958779617.europe-west1.run.app?herb=thyme). Try it with [other herbs](https://www.britannica.com/plant/list-of-herbs-and-spices-2024392). 
+This [website](https://herb-fun-facts-95958779617.europe-west1.run.app/) shows 11 interesting facts about an herb. Eg: [thyme](https://herb-fun-facts-95958779617.europe-west1.run.app?herb=thyme). Try it with [other herbs](https://www.britannica.com/plant/list-of-herbs-and-spices-2024392). 
 
 `URL`/?herb=`HERB_NAME`
 
