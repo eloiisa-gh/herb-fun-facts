@@ -9,7 +9,7 @@ Model used: `gemini-2.5-flash`: [Gemini 2.5 Flash](https://cloud.google.com/vert
 
 
 <details >
-  <summary>More details</summary>
+  <summary>Instructions</summary>
 
 Continuous Deployment: [Cloud Run](https://cloud.google.com/run) is configured to automatically deploy the web application when the source code is changed. 
 Generative AI was added to the application using Vertex AI.
