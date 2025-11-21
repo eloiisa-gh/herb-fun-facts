@@ -2,3 +2,4 @@ Flask
 gunicorn
 google-cloud-aiplatform
 google-auth
+python-dotenv
