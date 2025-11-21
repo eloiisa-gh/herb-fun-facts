@@ -1,9 +1,9 @@
 # Herb Fun Facts 🌿
 
-This [website](https://herb-fun-facts-95958779617.europe-west1.run.app/) shows 11 interesting facts about an herb. 
+This [website](https://herb-fun-facts-95958779617.us-central1.run.app/) shows 11 interesting facts about an herb. 
 This parameter can also be provided in this way: `URL`/?herb=`HERB_NAME`
 
-Eg: [thyme](https://herb-fun-facts-95958779617.europe-west1.run.app?herb=thyme). Try it with [other herbs](https://www.britannica.com/plant/list-of-herbs-and-spices-2024392). 
+Eg: [thyme](https://herb-fun-facts-95958779617.us-central1.run.app?herb=thyme). Try it with [other herbs](https://www.britannica.com/plant/list-of-herbs-and-spices-2024392). 
 
 Model used: `gemini-2.5-flash`: [Gemini 2.5 Flash](https://cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash)
 
@@ -58,6 +58,7 @@ Step #2: 'Build Configuration' -> 'Build Type': `Go, Node.js, Python, Java, .NET
 
 In the 'Configure' section, set the 'Service name' eg: `herb-fun-facts`, and 'Region'. 
 In 'Authentication', select `Allow unauthenticated invocations`. 
+In 'Containers' -> 'Variables & Secrets' set up the environment variables.
 
 Click 'Create'.
 
@@ -66,7 +67,9 @@ To get the resulting URL to view the running application:
 ```
 gcloud run services list
 ```
-https://herb-fun-facts-95958779617.europe-west1.run.app/
 
+https://herb-fun-facts-95958779617.us-central1.run.app/
+
+https://herb-fun-facts-95958779617.us-central1.run.app?herb=basil
 
 </details>
