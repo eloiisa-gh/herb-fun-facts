@@ -1,5 +1,4 @@
 import os
-
 import sys, json, logging
 
 
@@ -18,23 +17,28 @@ logger.addHandler(sh)
 logger.setLevel(logging.DEBUG)
 
 
+from dotenv import load_dotenv
 from flask import Flask, request
 
 import google.auth
 import vertexai
 from vertexai.generative_models import GenerativeModel
 
-_, project = google.auth.default()
+
+#-_, project = google.auth.default()
 
 app = Flask(__name__)
 
-MODEL_ID = "gemini-2.5-flash"
+load_dotenv()
+project = os.getenv("GOOGLE_CLOUD_PROJECT")
+model_id = os.getenv("MODEL_ID")
+
 
 @app.route("/")
 def hello_world():
     vertexai.init(project=project, location="us-central1")
-    model = GenerativeModel(MODEL_ID)
-    herb = request.args.get("herb", "peppermint") 
+    model = GenerativeModel(model_id)
+    herb = request.args.get("herb", "peppermint")
 
     prompt = f"""The user should have submitted the name of an herb.
         If the user requests anything besides herb facts, respond in a clear and polite manner that you only provide information about herbs.
