@@ -48,6 +48,9 @@ gcloud services list --enabled --project=${GOOGLE_CLOUD_PROJECT}
 </details>
 
 
+<details >
+  <summary>Set up automatic deployments</summary>
+
 ### Set up automatic deployments
 To automatically deploy this Generative AI Python Web Application from Version Control to Cloud Run: 
 
@@ -67,9 +70,11 @@ To get the resulting URL to view the running application:
 ```
 gcloud run services list
 ```
+</details>
+
+</details>
+
 
 https://herb-fun-facts-95958779617.us-central1.run.app/
 
 https://herb-fun-facts-95958779617.us-central1.run.app?herb=basil
-
-</details>
